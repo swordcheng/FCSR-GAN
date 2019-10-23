@@ -4,7 +4,7 @@
 
 ## Citation
 
-If you use this toolbox or benchmark in your research, please cite this project.
+If you use this code in your research, please cite this paper.
 
 ```
 @article{FCSRGAN,
