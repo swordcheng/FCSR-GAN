@@ -271,35 +271,3 @@ def get_preds_fromhm(hm):
     preds.add_(-.5)
 
     return preds
-
-
-def psnr(img1, img2):
-    assert (img1.dtype == img2.dtype == np.uint8)
-    img1 = img1.astype(np.float64)
-    img2 = img2.astype(np.float64)
-    mse = np.mean((img1 - img2) ** 2)
-    if mse == 0:
-        return float('inf')
-
-    return 20 * math.log10(255.0 / math.sqrt(mse))
-
-
-def ssim(im1, im2):
-    # print(im1.shape, im2.shape)
-    assert (im1.dtype == im2.dtype == np.uint8)
-    assert (im1.ndim == im2.ndim == 2)
-
-    mu1 = im1.mean()
-    mu2 = im2.mean()
-    sigma1 = np.sqrt(((im1 - mu1) ** 2).mean())
-    sigma2 = np.sqrt(((im2 - mu2) ** 2).mean())
-    sigma12 = ((im1 - mu1) * (im2 - mu2)).mean()
-    k1, k2, L = 0.01, 0.03, 255
-    c1 = (k1 * L) ** 2
-    c2 = (k2 * L) ** 2
-    c3 = c2 / 2
-    l12 = (2 * mu1 * mu2 + c1) / (mu1 ** 2 + mu2 ** 2 + c1)
-    c12 = (2 * sigma1 * sigma2 + c2) / (sigma1 ** 2 + sigma2 ** 2 + c2)
-    s12 = (sigma12 + c3) / (sigma1 * sigma2 + c3)
-
-    return l12 * c12 * s12
