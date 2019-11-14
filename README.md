@@ -16,9 +16,7 @@ This code is based on Pytorch 0.4.1 and CUDA 8.0.
 
 ## Pre-processing 
 
-All the faces are aligned using the [SeetaFace Engineer](https://github.com/seetaface/SeetaFaceEngine).
-
-All the faces are parsed using the [GFC](https://github.com/Yijunmaverick/GenerativeFaceCompletion).
+All the faces are processed using the [SeetaFace Engineer](https://github.com/seetaface/SeetaFaceEngine) and [GFC](https://github.com/Yijunmaverick/GenerativeFaceCompletion).
 
 ## Dataset
 We use the standard train&test split of the [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset.
