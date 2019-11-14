@@ -4,7 +4,7 @@ This is the source code for paper
 
 "FCSR-GAN: Joint Face Completion and Super-resolution via Multi-task Learning" </br>
 
-<img src="./img/network_architecture.png" width = "600px" height = "220px" align=center />
+<img src="./img/network_architecture.png" width = "800px" height = "293px" align=center />
 
 ## Experiment result
 
