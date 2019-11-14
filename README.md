@@ -8,7 +8,7 @@ This is the source code for paper
 
 ## Experiment result
 
-<img src="./img/res.png" width = "600px" height = "246px" align=center />
+<img src="./img/res.png" width = "800px" height = "328px" align=center />
 
 ## Environment requirest
 
